@@ -1,0 +1,28 @@
+CREATE DATABASE Timetable;
+
+\c course_schedule;
+
+CREATE TABLE courses (
+    id SERIAL PRIMARY KEY,
+    crs_sec VARCHAR(10),
+    hrs FLOAT,
+    title VARCHAR(255),
+    instructor VARCHAR(255),
+    campus VARCHAR(255),
+    building VARCHAR(255),
+    room VARCHAR(10),
+    days VARCHAR(10),
+    time VARCHAR(20),
+    start_date DATE,
+    end_date DATE,
+    term VARCHAR(10),
+    type VARCHAR(50)
+);
+
+INSERT INTO courses (crs_sec, hrs, title, instructor, campus, building, room, days, time, start_date, end_date, term, type) VALUES
+('COSC 2810 4T', 3.0, 'Systems Analysis and Design', 'Webster Univ Tashkent, Uzbekistan', 'Webster Univ Tashkent, Uzbekistan', NULL, '--T----', '02:00p 04:20p', '2025-01-13', '2025-05-09', 'SP', 'Lecture'),
+('COSC 3500 6T', 3.0, 'IT Project Management', 'Webster Univ Tashkent, Uzbekistan', 'Webster Univ Tashkent, Uzbekistan', NULL, '-----F-', '02:00p 04:20p', '2025-01-13', '2025-05-09', 'SP', 'Lecture'),
+('ENGL 1030 2T', 3.0, 'Introduction to Literature', 'Webster Univ Tashkent, Uzbekistan', 'Webster Univ Tashkent, Uzbekistan', NULL, '----R--', '09:00a 11:20a', '2025-01-13', '2025-05-09', 'SP', 'Lecture'),
+('KEYS 4008 5T', 3.0, 'Leading from Where', 'Webster Univ Tashkent, Uzbekistan', 'Webster Univ Tashkent, Uzbekistan', NULL, '----R--', '02:00p 04:20p', '2025-01-13', '2025-05-09', 'SP', 'Lecture'),
+('COSC 3410 1T', 3.0, 'Computer and Information', 'Webster Univ Tashkent, Uzbekistan', 'Webster Univ Tashkent, Uzbekistan', NULL, '---W---', '11:30a 01:50p', '2025-01-13', '2025-05-09', 'SP', 'Lecture'),
+('PHIL 2360 3U', 3.0, 'Environmental Ethics', 'Webster Univ Tashkent, Uzbekistan', 'Webster Univ Tashkent, Uzbekistan', NULL, '--T----', '09:00a 11:20a', '2025-01-13', '2025-05-09', 'SP', 'Lecture');
